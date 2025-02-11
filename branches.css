@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: rgb(29, 27, 27);
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./branch-bg.jpg'); /* Replace with a suitable background image */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.branches-container {
+    position: relative;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: fadeInDown 1.5s ease-out;
+    color: #333;
+}
+
+.branch-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.branch-card {
+    background-color: rgba(244, 242, 242, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    animation: fadeInUp 1s ease-out, pulse 3s infinite;
+    color: white;
+}
+
+.branch-card:hover {
+    transform: translateY(-10px) rotate(2deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background-color: #333;
+}
+
+.branch-card h2 {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
